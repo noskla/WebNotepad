@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>WebNotepad</title>
+        <meta name="author" content="Jarosław 'FK' C. - https://jaroslavc.eu/" />
+
+        <link rel="icon" type="image/png" href="img/webnotepad.png" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <script type="text/javascript" src="js/main.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    </head>
+    <body>
+
+        <textarea autofocus spellcheck="false"></textarea>
+
+        <div id="linksButton">&#x1f517;</div>
+        <div id="linksWindow">
+            <button id="closeLinks">&#x26CC;</button>
+            <button id="refreshLinks">&#x21bb;</button>
+        </div>
+
+        <div id="menuButton">
+        </div>
+        <div id="menuWindow">
+            <a href="#" id="savefile"></a>
+            <a href="#" title="Not yet available"></a>
+            <a href="#" title="Not yet available"></a>
+            <a href="changelog.txt" target="_blank"></a>
+            <a href="https://jaroslavc.eu/webnotepad" target="_blank" rel="noopener noreferrer"></a>
+            <button id="closeMenu">&#x26CC;</button>
+        </div>
+
+        <div id="fontSettings">
+            <form action="#">
+                <input type="text"/><input type="number"/><input type="color"/><input type="submit"/>
+            </form>
+            <button id="closeFontSettings">&#x26CC;</button>
+        </div>
+
+    </body>
+</html>

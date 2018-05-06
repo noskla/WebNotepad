@@ -1,0 +1,257 @@
+/*
+
+    WebNotepad for Firefox
+    https://jaroslavc.eu/webnotepad
+
+*/
+
+* 
+{
+    outline: 0; /* Fixes weird outlines on Chromium browsers */
+    --background: #2f3542; /* Prevent screen flash while theme CSS is loading */
+}
+
+body
+{
+    padding: 0;
+    background: var(--background);
+    overflow: hidden;
+}
+
+textarea
+{
+    position: absolute;
+    background: inherit;
+    border: 0;
+    resize: none;
+    color: var(--text);
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
+}
+
+.error
+{
+    max-height: 30px;
+    padding: 10px;
+    margin: 0;
+    line-height: 30px;
+    background: var(--menu-background);
+    color: var(--link-border-hover-second);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---- ---- ---- Menu ---- ---- ---- */
+
+#menuButton
+{
+    position: fixed;
+    background: url("../img/dots.png") center no-repeat;
+    background-size: cover;
+    top: 20px; right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#menuWindow
+{
+    font-family: "Tahoma", sans-serif;
+    position: fixed;
+    top: 10px; right: 10px;
+    width: 175px;
+    height: auto;
+    background: var(--menu-background);
+    padding: 10px;
+    line-height: 45px;
+    display: none;
+    transition: ease-in-out .4s;
+}
+
+#menuWindow a, #menuWindow a:visited
+{
+    border-top: solid 1.5px var(--buttons);
+    color: var(--menu-text);
+    text-decoration: none;
+    padding: 5px;
+}
+
+#menuWindow a:hover
+{
+    border-top-color: var(--link-border-hover);
+}
+
+#menuWindow a:after
+{
+    content: "\A";
+    white-space: pre;
+    border: 0;
+}
+
+#closeMenu, #fontSettings button
+{
+    border: 0;
+    background: 0;
+    color: var(--menu-text);
+    float: right;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+}
+
+#closeMenu:hover
+{
+    color: var(--link-border-hover-second);
+    transform: rotate(90deg);
+}
+
+/* ---- ---- ---- Links ---- ---- ---- */
+
+#linksButton, #linksWindow button:first-child, #linksWindow button:nth-child(2)
+{
+    clear: both;
+    position: fixed;
+    bottom: 0; left: 0;
+    border: 0;
+    background: var(--buttons);
+    color: var(--text);
+    width: 70px;
+    height: 70px;
+    font-size: 1.3em;
+    line-height: 70px;
+    text-align: center;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+}
+
+#linksButton:hover
+{
+    background: var(--hover-buttons);
+}
+
+#linksWindow
+{
+    width: 100%;
+    height: 70px;
+    background: var(--buttons);
+    color: var(--text);
+    position: fixed;
+    bottom: 0; left: 0;
+    z-index: 2;
+    line-height: 70px;
+    display: none;
+    font-family: "Franklin Gothic Medium", sans-serif;
+    overflow: auto;
+}
+
+#linksWindow button:first-child, #linksWindow button:nth-child(2)
+{
+    background: transparent;
+    position: absolute;
+    overflow: hidden;
+}
+
+#linksWindow button:nth-child(2)
+{ 
+    left: 70px; transition: ease-in-out .5s; 
+}
+
+#linksWindow button:first-child:hover
+{
+    color: var(--link-border-hover-second);
+    transform: rotate(90deg);
+}
+
+#linksWindow button:nth-child(2):hover
+{
+    color: var(--link-border-hover-third);
+    transform: rotate(360deg);
+}
+
+#linksWindow a, #linksWindow a:visited
+{
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 3px;
+}
+
+#linksWindow a:first-of-type
+{
+    margin-left: 160px;
+}
+
+#linksWindow a:hover
+{
+    border-top: solid 1.5px var(--link-border-hover);
+}
+
+.ssl:hover
+{
+    border-top-color: var(--link-border-hover-third) !important;
+}
+
+/* ---- ---- ---- Font settings ---- ---- ---- */
+
+#fontSettings
+{
+	display: none;
+    width: 30%;
+    min-width: 450px;
+    height: auto;
+    background: var(--buttons);
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    margin: 0;
+}
+
+#fontSettings button
+{
+    cursor: pointer;
+    color: var(--link-border-hover-second);
+}
+
+#fontSettings input
+{
+    border: 0;
+    background: var(--input-background);
+    padding: 5px;
+    height: 30px;
+    transform: translateY(5px);
+}
+
+#fontSettings input[type=text]
+{
+    width: 200px;
+}
+
+#fontSettings input[type=number]
+{
+    max-width: 50px;
+}
+
+#fontSettings input[type=color]
+{
+    height: 40px;
+    transform: translateY(15px);
+}
+
+#fontSettings input[type=submit]
+{
+    height: 40px;
+    width: 75px;
+}
+
+#closeFontSettings
+{
+    transform: translateY(-25px);
+}

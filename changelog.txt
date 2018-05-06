@@ -1,0 +1,14 @@
+WebNotepad, Version 1.4
+
+- Whole code rewritten for better quality.
+- Removed fonts.google.com for enhanced privacy.
+- User interface almost completely changed to look more modern and flat.
+- Added rel="noopener noreferrer" to external links.
+- Added refresh button in links menu.
+- Mouse-over top border in links now shows what links are on HTTPS (green) or HTTP (blue)
+
+Some functions are still unavailable because it needs some time,
+if you need them you can use Version 1.3 available on my website.
+https://jaroslavc.eu/webnotepad/
+
+The rest of missing functions will become available again in version 1.5.

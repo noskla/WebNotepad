@@ -1,0 +1,19 @@
+{
+
+    "manifest_version": 2,
+    "name": "WebNotepad",
+    "version": "1.4",
+    
+    "description": "A simple notepad for Firefox",
+    "homepage_url": "https://jaroslavc.eu/webnotepad/",
+    "icons": {
+      "600": "img/webnotepad.png"
+    },
+  
+    "browser_action": {
+      "default_icon": "img/webnotepad.png",
+      "default_title": "WebNotepad",
+      "default_popup": "popup.html"
+    }
+  
+  }

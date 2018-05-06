@@ -1,0 +1,20 @@
+/*
+
+    WebNotepad for Firefox
+    https://jaroslavc.eu/webnotepad
+
+*/
+
+*
+{
+    --background: #2f3542 !important;
+    --text: #ffffff;
+    --buttons: #57606f;
+    --hover-buttons: #747d8c;
+    --menu-background: #f1f2f6;
+    --menu-text: #2f3542;
+    --link-border-hover: #70a1ff;
+    --link-border-hover-second: #ff4757;
+    --link-border-hover-third: #2ed573;
+    --input-background: #f1f2f6;
+}
