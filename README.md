@@ -1,5 +1,8 @@
 # WebNotepad - A simple notepad for Firefox
 
+What's new in version 1.5:
+- Font settings and switch theme functions are now working
+
 What's new in version 1.4:
 - Whole code has been rewritten
 - Removed fonts.google.com
