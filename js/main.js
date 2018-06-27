@@ -8,6 +8,7 @@
 //      Menus :
 show_menu = false;
 show_links = false;
+show_fonts = false;
 
 //      Colors :
 theme = 1; // 1 is dark, 0 is white.
@@ -39,7 +40,7 @@ locale = {
     no_links_found: "I didn't found any links."
 };
 //      Other :
-version = "1.5 (Pre-release)";
+version = "1.5";
 
 // --- --- --- --- --- --- --- --- --- --- ---
 
@@ -95,11 +96,6 @@ function remove_links(links_window)
     }
 }
 
-function change_font(font_name, weight, color, textarea)
-{
-
-}
-
 // --- --- --- --- --- --- --- --- --- --- ---
 
 window.addEventListener("load", function() {
@@ -113,6 +109,14 @@ window.addEventListener("load", function() {
     var close_links_button      = document.getElementById("closeLinks");
     var refresh_links_button    = document.getElementById("refreshLinks");
     var font_settings           = document.getElementById("fontSettings");
+	var font_settings_button    = document.getElementById("font_settings_button");
+	var font_settings_exitbutton= document.getElementById("closeFontSettings");
+	var setFontName				= document.getElementsByTagName("input")[0];
+	var setFontSize				= document.getElementsByTagName("input")[1];
+	var setFontColor			= document.getElementsByTagName("input")[2];
+	var fontSubmitButton		= document.getElementById("fontSubmitButton");
+	var changeThemeButton		= document.getElementById("change_theme_button");
+	
 
 
     // Set the default theme.
@@ -170,6 +174,40 @@ window.addEventListener("load", function() {
         remove_links(links_window);
         get_url_list(textarea, links_window);
     });
-
+	
+	font_settings_button.addEventListener("click", function() {
+		if (!show_fonts) {
+			font_settings.style.display = "block";
+			show_fonts = true;
+		}
+		else {
+			font_settings.style.display = "none";
+			show_fonts = false;
+		}
+	});
+	
+	font_settings_exitbutton.addEventListener("click", function() {
+		font_settings.style.display = "none";
+		show_fonts = false;
+	});
+	
+	fontSubmitButton.addEventListener("click", function() {
+		textarea.style.fontFamily = setFontName.value;
+		textarea.style.fontSize = setFontSize.value;
+		textarea.style.color = setFontColor.value;
+		font_settings.style.display = "none";
+		show_fonts = false;
+	});
+	
+	changeThemeButton.addEventListener("click", function() {
+		if (theme) {
+			theme_link.href = 'css/white.css';
+			theme = 0;
+		}
+		else {
+			theme_link.href = 'css/black.css';
+			theme = 1;
+		}
+	});
 
 });

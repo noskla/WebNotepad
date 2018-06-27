@@ -7,7 +7,6 @@
 
         <link rel="icon" type="image/png" href="img/webnotepad.png" />
         <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <script type="text/javascript" src="js/main.js"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     </head>
     <body>
@@ -24,8 +23,8 @@
         </div>
         <div id="menuWindow">
             <a href="#" id="savefile"></a>
-            <a href="#" title="Not yet available"></a>
-            <a href="#" title="Not yet available"></a>
+            <a href="#" id="font_settings_button"></a>
+            <a href="#" id="change_theme_button"></a>
             <a href="changelog.txt" target="_blank"></a>
             <a href="https://jaroslavc.eu/webnotepad" target="_blank" rel="noopener noreferrer"></a>
             <button id="closeMenu">&#x26CC;</button>
@@ -33,10 +32,11 @@
 
         <div id="fontSettings">
             <form action="#">
-                <input type="text"/><input type="number"/><input type="color"/><input type="submit"/>
+				<input type="text" id="set_fontName"/><input type="number" id="set_fontSize"/><input type="color" id="set_fontColor"/><input type="submit" id="fontSubmitButton"/>
             </form>
             <button id="closeFontSettings">&#x26CC;</button>
         </div>
 
+		<script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>

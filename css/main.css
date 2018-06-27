@@ -8,7 +8,6 @@
 * 
 {
     outline: 0; /* Fixes weird outlines on Chromium browsers */
-    --background: #2f3542; /* Prevent screen flash while theme CSS is loading */
 }
 
 body
@@ -254,4 +253,13 @@ textarea
 #closeFontSettings
 {
     transform: translateY(-25px);
+}
+
+#fontSubmitButton
+{
+	cursor: pointer;
+}
+
+#fontSubmitButton:hover {
+	background: lightblue;
 }
