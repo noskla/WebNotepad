@@ -5,12 +5,7 @@
 
 */
 
-(function() {
-
-    browser.tabs.create(
-        {
-            url: 'index.html'
-        });
-    window.close();
-
-});
+browser.tabs.create({
+        url: 'index.html'
+    });
+window.close();

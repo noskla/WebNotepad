@@ -1,3 +1,8 @@
+WebNotepad, Version 1.5.1
+
+- Fixed issue when new tab with notepad didn't wanted to load
+
+
 WebNotepad, Version 1.5
 
 - Font settings and switch theme functions are now working.

@@ -40,7 +40,7 @@ locale = {
     no_links_found: "I didn't found any links."
 };
 //      Other :
-version = "1.5";
+version = "1.5.1";
 
 // --- --- --- --- --- --- --- --- --- --- ---
 
