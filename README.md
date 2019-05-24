@@ -1,5 +1,8 @@
 # WebNotepad - A simple notepad for Firefox
 
+#### This project is no longer maintained,
+#### please use [Mozilla's Firefox Notes](https://addons.mozilla.org/en-US/firefox/addon/notes-by-firefox/) instead.
+
 What's new in version 1.5.1:
 - Fixed issue when new tab with notepad didn't wanted to load
 
